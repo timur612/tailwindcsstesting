@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body class="bg-[#f2f2f2]">
+    <header class="mt-8 ml-5">
+        <div class="max-w-xl flex justify-between">
+            <h1 class="font-[500] text-xl text-[#7c73a9]">Sai</h1>
+            <buttton id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none cursor-pointer mr-5">
+                &#9776;
+            </buttton>
+            <nav class="hidden sm:block space-x-8">
+                <a class="hover:opacity-70 cursor-pointer">Обзор рейсов</a>
+                <a class="text-[#7c73a9] hover:opacity-70 cursor-pointer">Управление рейсов</a>
+            </nav>
+
+            <nav id="mobile-menu" class="hidden sm:hidden grid grid-flow-row text-xl absolute w-full h-full top-0 left-0 p-5 bg-white">
+                <button id="mobile-close-button" type="button" class="absolute right-0 bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <span class="sr-only">Close menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <a class="hover:opacity-70 cursor-pointer absolute top-10 left-10">Обзор рейсов</a>
+                <a class="text-[#7c73a9] hover:opacity-70 cursor-pointer absolute top-20 left-10">Управление рейсов</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="rounded ml-5 my-10 bg-white xl:w-1/2  mr-5 p-5">
+        <div class="flex sm:justify-between ">
+            <div class="flex">
+                <a class="hover:opacity-70 hover:cursor-pointer text-xl text-[#7c73a9]"> < </a>
+                <p class="ml-5 mr-5 text-xl font-[500]">25 марта, Сб, 77-771</p>
+                <a class="hover:opacity-70 hover:cursor-pointer text-xl text-[#7c73a9]"> > </a>
+            </div>
+            <form class="hidden md:block">
+                <input
+                    class="form-input border-slate-100 bg-slate-100 p-1 w-40 rounded"
+                    type="search"
+                    placeholder="Найти рейс"
+                    aria-label="Search"
+                />
+            </form>
+        </div>
+
+        <div class="my-5 grid grid-cols-3 md:grid-cols-5 gap-5">
+            <div class="bg-[#f9fafe] p-2">
+                <div class="flex justify-between text-sm">
+                    <p class="text-[#b3b2cf]">Вылет</p>
+                </div>
+                <div class="my-5 mb-0 flex justify-between">
+                    <p class="font-[500]">AER</p>
+                    <p class="text-sm my-1">15:40</p>
+                </div>
+            </div>
+            <div class="bg-[#f9fafe] p-2">
+                <div class="flex justify-between text-sm">
+                    <p class="text-[#b3b2cf]">Прилет</p>
+                </div>
+                <div class="my-5 mb-0 flex justify-between">
+                    <p class="font-[500]">IST</p>
+                    <p class="text-sm my-1">15:40</p>
+                </div>
+            </div>
+            <div class="bg-[#f9fafe] p-2">
+                <div class="flex justify-between text-sm">
+                    <p class="text-[#b3b2cf]">Тип ВС</p>
+                </div>
+                <div class="my-5 mb-0 flex justify-between">
+                    <p class="font-[500]">СУ</p>
+                </div>
+            </div>
+            <div class="bg-[#f9fafe] p-2">
+                <div class="flex justify-between text-sm">
+                    <p class="text-[#b3b2cf]">Статус</p>
+                </div>
+                <div class="my-5 mb-0 flex justify-between">
+                    <p class="font-[500]">Открыт</p>
+                </div>
+            </div>
+            <div class="bg-[#f9fafe] p-2">
+                <div class="flex justify-between text-sm">
+                    <p class="text-[#b3b2cf]">Бизнес-правило</p>
+                </div>
+                <div class="my-5 mb-0 flex justify-between">
+                    <p class="font-[500]">ASR</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ml-5 grid grid-cols-3 gap-3 mr-5 xl:w-[60rem]">
+        <div class="flex justify-between rounded bg-white p-5">
+            <p class="font-[500]">Выручка плановая</p>
+            <img class="hidden lg:block" src="./assets/chevron-up.svg">
+        </div>
+        <div class="flex justify-between rounded bg-white p-5">
+            <p class="font-[500]">Загрузка плановая</p>
+            <img class="hidden lg:block" src="./assets/chevron-up.svg">
+        </div>
+        <div class="flex justify-between rounded bg-white p-5">
+            <p class="font-[500]">Средняя доходная плановая</p>
+            <img class="hidden lg:block" src="./assets/chevron-up.svg">
+        </div>
+        <div class="flex justify-between rounded bg-white p-5">
+            <p class="font-[500]">Изменения с рейсом плановая</p>
+            <img class="hidden lg:block" src="./assets/chevron-down.svg">
+        </div>
+    </div>
+
+    <div class="hidden sm:block rounded bg-white p-5 ml-5 my-5 mr-5 xl:w-[70%]">
+        <div class="flex justify-between text-sm sm:text-[1rem] sm:justify-start sm:space-x-5 divide-x">
+            <div class="p-2 pl-0 h-[30%]">
+                <p class="font-[500]" >Эконом</p>
+            </div>
+            <div class="p-2 h-[30%]">
+                <p class="font-[500]">КР 100</p>
+            </div>
+            <div class="p-2 h-[30%]">
+                <p class="font-[500]">БЛК 0</p>
+            </div>
+            <div class="p-2 h-[30%]">
+                <p class="font-[500]">ДКР 100</p>
+            </div>
+            <div class="p-2 h-[30%]">
+                <p class="font-[500]">МКС 100</p>
+            </div>
+            <div class="flex p-2 h-[30%]">
+                <p class="font-[500]">БР 2</p>
+
+                <div class="h-[10px] my-2 w-[2rem] bg-[#f2f2f2] ml-2 mr-2">
+                    <div class="self-end h-[10px] w-[70%] bg-[#7c73a9]"></div>
+                </div>
+
+                <p style="font-weight: 500">ДСТ 98</p>
+            </div>
+          </div>
+    <table class="table-auto overflow-auto my-5 w-full text-sm text-left">
+        <thead class="bg-[#f2f2f2] text-sm uppercase ">
+          <tr class="text-[#7c73a9]">
+            <th class="p-2" scope="col">КБ</th>
+            <th scope="col">СТС</th>
+            <th scope="col">РСС</th>
+            <th scope="col">РСВ</th>
+            <th scope="col">Изменения</th>
+            <th scope="col">ЛМТ</th>
+            <th scope="col">МИН</th>
+            <th scope="col">ЛС</th>
+            <th scope="col">СБ</th>
+            <th scope="col">БР</th>
+            <th scope="col">ДСТ</th>
+            <th scope="col">RQ/SA</th>
+            <th scope="col">ГР</th>
+            <th scope="col">Rec</th>
+            <th scope="col">Изменения</th>
+          </tr>
+        </thead>
+        <tbody class="font-[500] ">
+          <tr class="bg-[#f2f2f2] text-md border-t-8 border-white ">
+            <th class="p-2">Y</th>
+            <td>Открыт</td>
+            <td>100</td>
+            <td>50</td>
+            <td></td>
+            <td>0</td>
+            <td>0</td>
+            <td><img src="./assets/check.svg" alt="" /></td>
+            <td>0</td>
+            <td>0</td>
+            <td>98</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="bg-[#f2f2f2] text-md border-t-8 border-white">
+            <th class="p-2">Y</th>
+            <td>Открыт</td>
+            <td>100</td>
+            <td>50</td>
+            <td></td>
+            <td>0</td>
+            <td>0</td>
+            <td><img src="./assets/check.svg" alt="" /></td>
+            <td>0</td>
+            <td>0</td>
+            <td>98</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="bg-[#f2f2f2] text-md border-t-8 border-white">
+            <th class="p-2">Y</th>
+            <td>Открыт</td>
+            <td>100</td>
+            <td>50</td>
+            <td></td>
+            <td>0</td>
+            <td>0</td>
+            <td><img src="./assets/check.svg" alt="" /></td>
+            <td>0</td>
+            <td>0</td>
+            <td>98</td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
